@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 900 900" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;">
+    <rect x="0" y="0" width="900" height="900" style="fill:rgb(248,249,252);"/>
+    <rect x="0" y="0" width="900" height="900" style="fill:none;"/>
+    <g transform="matrix(1,0,0,1,449.725,52)">
+        <text x="-82.236px" y="0px" style="font-family:'HelveticaNeue-Medium', 'Helvetica Neue', sans-serif;font-weight:500;font-size:11px;fill:rgb(148,163,184);">K<tspan x="-74.151px -65.857px -57.97px -49.885px -42.405px -33.913px -30.305px -22.418px -13.519px -6.039px 2.453px 9.526px 13.134px 20.614px 28.094px 36.388px 45.298px 48.906px 52.514px 56.122px 62.788px 69.454px 76.12px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">RAKEN AGENT ZERO · 2026</tspan></text>
+    </g>
+    <g transform="matrix(1,0,0,1,450,88)">
+        <text x="-200.592px" y="0px" style="font-family:'HelveticaNeue-Bold', 'Helvetica Neue';font-weight:700;font-size:28px;fill:rgb(30,41,59);">Bi-Dir<tspan x="-123.9px -107.828px " y="0px 0px ">ec</tspan>tional AI T<tspan x="39.872px 50.764px " y="0px 0px ">ra</tspan>ding Loop</text>
+    </g>
+    <g transform="matrix(1,0,0,1,450,112)">
+        <text x="-114.978px" y="0px" style="font-family:'HelveticaNeue', 'Helvetica Neue';font-size:13px;fill:rgb(100,116,139);">How the components talk to each other</text>
+    </g>
+    <path d="M590,380C590,368.962 581.038,360 570,360L330,360C318.962,360 310,368.962 310,380L310,540C310,551.038 318.962,560 330,560L570,560C581.038,560 590,551.038 590,540L590,380Z" style="fill:white;stroke:rgb(124,58,237);stroke-width:3px;"/>
+    <path d="M590,364C590,361.792 588.208,360 586,360L314,360C311.792,360 310,361.792 310,364C310,366.208 311.792,368 314,368L586,368C588.208,368 590,366.208 590,364Z" style="fill:rgb(124,58,237);"/>
+    <rect x="310" y="364" width="280" height="4" style="fill:rgb(124,58,237);"/>
+    <g transform="matrix(1,0,0,1,450,420)">
+        <text x="-22px" y="0px" style="font-family:'AppleColorEmoji', 'Apple Color Emoji';font-size:44px;">💻</text>
+    </g>
+    <g transform="matrix(1,0,0,1,450,462)">
+        <text x="-44.487px" y="0px" style="font-family:'HelveticaNeue-Bold', 'Helvetica Neue';font-weight:700;font-size:18px;fill:rgb(124,58,237);">AEGIS CLI</text>
+    </g>
+    <g transform="matrix(1,0,0,1,450,482)">
+        <text x="-39.606px" y="0px" style="font-family:'CourierNewPSMT', 'Courier New', monospace;font-size:11px;fill:rgb(148,163,184);">aegis-cli.py</text>
+    </g>
+    <g transform="matrix(1,0,0,1,450,502)">
+        <text x="-41.157px" y="0px" style="font-family:'HelveticaNeue', 'Helvetica Neue';font-size:11px;fill:rgb(100,116,139);">MacBook Air M4</text>
+    </g>
+    <g transform="matrix(1,0,0,1,450,522)">
+        <text x="-74.063px" y="0px" style="font-family:'HelveticaNeue', 'Helvetica Neue';font-size:11px;fill:rgb(100,116,139);">--pulse · --balance · --execute</text>
+    </g>
+    <path d="M595,156C595,147.169 587.831,140 579,140L321,140C312.169,140 305,147.169 305,156L305,304C305,312.831 312.169,320 321,320L579,320C587.831,320 595,312.831 595,304L595,156Z" style="fill:white;stroke:rgb(124,58,237);stroke-width:2px;"/>
+    <path d="M595,143C595,141.344 593.656,140 592,140L308,140C306.344,140 305,141.344 305,143C305,144.656 306.344,146 308,146L592,146C593.656,146 595,144.656 595,143Z" style="fill:rgb(124,58,237);"/>
+    <rect x="305" y="143" width="290" height="3" style="fill:rgb(124,58,237);"/>
+    <g transform="matrix(1,0,0,1,370,208)">
+        <text x="-17px" y="0px" style="font-family:'AppleColorEmoji', 'Apple Color Emoji';font-size:34px;">🐂</text>
+    </g>
+    <g transform="matrix(1,0,0,1,450,208)">
+        <text x="-17px" y="0px" style="font-family:'AppleColorEmoji', 'Apple Color Emoji';font-size:34px;">⚖️</text>
+    </g>
+    <g transform="matrix(1,0,0,1,530,208)">
+        <text x="-17px" y="0px" style="font-family:'AppleColorEmoji', 'Apple Color Emoji';font-size:34px;">🐻</text>
+    </g>
+    <g transform="matrix(1,0,0,1,370,228)">
+        <text x="-7.582px" y="0px" style="font-family:'HelveticaNeue', 'Helvetica Neue';font-size:9px;fill:rgb(148,163,184);">Bull</text>
+    </g>
+    <g transform="matrix(1,0,0,1,450,228)">
+        <text x="-12.506px" y="0px" style="font-family:'HelveticaNeue', 'Helvetica Neue';font-size:9px;fill:rgb(148,163,184);">Judge</text>
+    </g>
+    <g transform="matrix(1,0,0,1,530,228)">
+        <text x="-9.414px" y="0px" style="font-family:'HelveticaNeue', 'Helvetica Neue';font-size:9px;fill:rgb(148,163,184);">Bear</text>
+    </g>
+    <g transform="matrix(1,0,0,1,450,256)">
+        <text x="-66.734px" y="0px" style="font-family:'HelveticaNeue-Bold', 'Helvetica Neue';font-weight:700;font-size:17px;fill:rgb(30,41,59);">Council of Thr<tspan x="47.218px 56.975px " y="0px 0px ">ee</tspan></text>
+    </g>
+    <g transform="matrix(1,0,0,1,450,276)">
+        <text x="-77.424px" y="0px" style="font-family:'HelveticaNeue', 'Helvetica Neue';font-size:11px;fill:rgb(100,116,139);">AI debate · BUY / HOLD / SELL</text>
+    </g>
+    <g transform="matrix(1,0,0,1,450,295)">
+        <text x="-65.808px" y="0px" style="font-family:'HelveticaNeue', 'Helvetica Neue';font-size:11px;fill:rgb(100,116,139);">Conﬁdence scor<tspan x="14.866px 20.773px " y="0px 0px ">e </tspan>· TP · SL</text>
+    </g>
+    <path d="M420,360L420,323" style="fill:none;fill-rule:nonzero;stroke:rgb(124,58,237);stroke-width:2.5px;"/>
+    <path d="M410,344C410,338.481 405.519,334 400,334L332,334C326.481,334 322,338.481 322,344C322,349.519 326.481,354 332,354L400,354C405.519,354 410,349.519 410,344Z" style="fill:rgb(237,233,254);"/>
+    <g transform="matrix(1,0,0,1,366,348)">
+        <text x="-23.8px" y="0px" style="font-family:'HelveticaNeue', 'Helvetica Neue';font-size:10px;fill:rgb(124,58,237);">AI ver<tspan x="1.57px 7.5px " y="0px 0px ">di</tspan>ct?</text>
+    </g>
+    <path d="M480,323L480,360" style="fill:none;fill-rule:nonzero;stroke:rgb(124,58,237);stroke-width:2px;stroke-dasharray:5,3;"/>
+    <path d="M572,344C572,338.481 567.519,334 562,334L500,334C494.481,334 490,338.481 490,344C490,349.519 494.481,354 500,354L562,354C567.519,354 572,349.519 572,344Z" style="fill:rgb(237,233,254);"/>
+    <g transform="matrix(1,0,0,1,531,348)">
+        <text x="-27.436px" y="0px" style="font-family:'HelveticaNeue', 'Helvetica Neue';font-size:10px;fill:rgb(124,58,237);">BUY 68%</text>
+        <text x="19.794px" y="0px" style="font-family:'LucidaGrande', 'Lucida Grande', sans-serif;font-weight:500;font-size:10px;fill:rgb(124,58,237);">✓</text>
+    </g>
+    <path d="M270,376C270,367.169 262.831,360 254,360L76,360C67.169,360 60,367.169 60,376L60,544C60,552.831 67.169,560 76,560L254,560C262.831,560 270,552.831 270,544L270,376Z" style="fill:white;stroke:rgb(2,132,199);stroke-width:2px;"/>
+    <path d="M270,363C270,361.344 268.656,360 267,360L63,360C61.344,360 60,361.344 60,363C60,364.656 61.344,366 63,366L267,366C268.656,366 270,364.656 270,363Z" style="fill:rgb(2,132,199);"/>
+    <rect x="60" y="363" width="210" height="3" style="fill:rgb(2,132,199);"/>
+    <g transform="matrix(1,0,0,1,165,423)">
+        <text x="-22px" y="0px" style="font-family:'AppleColorEmoji', 'Apple Color Emoji';font-size:44px;">🤖</text>
+    </g>
+    <g transform="matrix(1,0,0,1,165,463)">
+        <text x="-39.185px" y="0px" style="font-family:'HelveticaNeue-Bold', 'Helvetica Neue';font-weight:700;font-size:17px;fill:rgb(30,41,59);">Aegis Bot</text>
+    </g>
+    <g transform="matrix(1,0,0,1,165,483)">
+        <text x="-44.523px" y="0px" style="font-family:'HelveticaNeue', 'Helvetica Neue';font-size:11px;fill:rgb(100,116,139);">24/7 T<tspan x="-14.361px -8.454px " y="0px 0px ">el</tspan>egram bot</text>
+    </g>
+    <g transform="matrix(1,0,0,1,165,501)">
+        <text x="-31.576px" y="0px" style="font-family:'HelveticaNeue', 'Helvetica Neue';font-size:11px;fill:rgb(100,116,139);">Pulse history</text>
+    </g>
+    <g transform="matrix(1,0,0,1,165,519)">
+        <text x="-45.832px" y="0px" style="font-family:'HelveticaNeue', 'Helvetica Neue';font-size:11px;fill:rgb(100,116,139);">News · Jour<tspan x="13.03px 19.146px " y="0px 0px ">na</tspan>l DB</text>
+    </g>
+    <g transform="matrix(1,0,0,1,165,537)">
+        <text x="-33.005px" y="0px" style="font-family:'CourierNewPSMT', 'Courier New', monospace;font-size:10px;fill:rgb(125,211,252);">Hetzner VPS</text>
+    </g>
+    <path d="M310,430L273,430" style="fill:none;fill-rule:nonzero;stroke:rgb(2,132,199);stroke-width:2.5px;"/>
+    <path d="M306,418C306,412.481 301.519,408 296,408L286,408C280.481,408 276,412.481 276,418L276,438C276,443.519 280.481,448 286,448L296,448C301.519,448 306,443.519 306,438L306,418Z" style="fill:rgb(224,242,254);"/>
+    <g transform="matrix(-3.82857e-16,-1,1,-3.82857e-16,291,426)">
+        <text x="-16.76px" y="0px" style="font-family:'HelveticaNeue', 'Helvetica Neue';font-size:10px;fill:rgb(2,132,199);">context</text>
+    </g>
+    <path d="M273,490L310,490" style="fill:none;fill-rule:nonzero;stroke:rgb(2,132,199);stroke-width:2px;stroke-dasharray:5,3;"/>
+    <path d="M306,478C306,472.481 301.519,468 296,468L286,468C280.481,468 276,472.481 276,478L276,498C276,503.519 280.481,508 286,508L296,508C301.519,508 306,503.519 306,498L306,478Z" style="fill:rgb(224,242,254);"/>
+    <g transform="matrix(-3.82857e-16,-1,1,-3.82857e-16,291,486)">
+        <text x="-15px" y="0px" style="font-family:'HelveticaNeue', 'Helvetica Neue';font-size:10px;fill:rgb(2,132,199);">history</text>
+    </g>
+    <path d="M840,376C840,367.169 832.831,360 824,360L646,360C637.169,360 630,367.169 630,376L630,544C630,552.831 637.169,560 646,560L824,560C832.831,560 840,552.831 840,544L840,376Z" style="fill:white;stroke:rgb(234,88,12);stroke-width:2px;"/>
+    <path d="M840,363C840,361.344 838.656,360 837,360L633,360C631.344,360 630,361.344 630,363C630,364.656 631.344,366 633,366L837,366C838.656,366 840,364.656 840,363Z" style="fill:rgb(234,88,12);"/>
+    <rect x="630" y="363" width="210" height="3" style="fill:rgb(234,88,12);"/>
+    <g transform="matrix(1,0,0,1,735,423)">
+        <text x="-22px" y="0px" style="font-family:'AppleColorEmoji', 'Apple Color Emoji';font-size:44px;">🐙</text>
+    </g>
+    <g transform="matrix(1,0,0,1,735,463)">
+        <text x="-29.121px" y="0px" style="font-family:'HelveticaNeue-Bold', 'Helvetica Neue';font-weight:700;font-size:17px;fill:rgb(30,41,59);">Kraken</text>
+    </g>
+    <g transform="matrix(1,0,0,1,735,483)">
+        <text x="-43.511px" y="0px" style="font-family:'HelveticaNeue', 'Helvetica Neue';font-size:11px;fill:rgb(100,116,139);">Oﬃcial CLI binary</text>
+    </g>
+    <g transform="matrix(1,0,0,1,735,501)">
+        <text x="-36.058px" y="0px" style="font-family:'HelveticaNeue', 'Helvetica Neue';font-size:11px;fill:rgb(100,116,139);">Live price feed</text>
+    </g>
+    <g transform="matrix(1,0,0,1,735,519)">
+        <text x="-41.552px" y="0px" style="font-family:'HelveticaNeue', 'Helvetica Neue';font-size:11px;fill:rgb(100,116,139);">Portfolio balance</text>
+    </g>
+    <g transform="matrix(1,0,0,1,735,537)">
+        <text x="-39.424px" y="0px" style="font-family:'HelveticaNeue', 'Helvetica Neue';font-size:11px;fill:rgb(100,116,139);">Or<tspan x="-27.599px -21.076px " y="0px 0px ">de</tspan>r execution</text>
+    </g>
+    <path d="M590,430L627,430" style="fill:none;fill-rule:nonzero;stroke:rgb(234,88,12);stroke-width:2.5px;"/>
+    <path d="M624,418C624,412.481 619.519,408 614,408L604,408C598.481,408 594,412.481 594,418L594,438C594,443.519 598.481,448 604,448L614,448C619.519,448 624,443.519 624,438L624,418Z" style="fill:rgb(255,247,237);"/>
+    <g transform="matrix(-3.82857e-16,-1,1,-3.82857e-16,609,426)">
+        <text x="-16.765px" y="0px" style="font-family:'HelveticaNeue', 'Helvetica Neue';font-size:10px;fill:rgb(234,88,12);">r<tspan x="-13.615px -8.245px " y="0px 0px ">eq</tspan>uest</text>
+    </g>
+    <path d="M627,490L590,490" style="fill:none;fill-rule:nonzero;stroke:rgb(234,88,12);stroke-width:2px;stroke-dasharray:5,3;"/>
+    <path d="M624,478C624,472.481 619.519,468 614,468L604,468C598.481,468 594,472.481 594,478L594,498C594,503.519 598.481,508 604,508L614,508C619.519,508 624,503.519 624,498L624,478Z" style="fill:rgb(255,247,237);"/>
+    <g transform="matrix(-3.82857e-16,-1,1,-3.82857e-16,609,486)">
+        <text x="-15.121px" y="0px" style="font-family:'HelveticaNeue', 'Helvetica Neue';font-size:10px;fill:rgb(234,88,12);">data</text>
+        <text x="7.479px" y="0px" style="font-family:'LucidaGrande', 'Lucida Grande', sans-serif;font-weight:500;font-size:10px;fill:rgb(234,88,12);">✓</text>
+    </g>
+    <path d="M720,694C720,686.273 713.727,680 706,680L194,680C186.273,680 180,686.273 180,694L180,796C180,803.727 186.273,810 194,810L706,810C713.727,810 720,803.727 720,796L720,694Z" style="fill:white;stroke:rgb(226,232,240);stroke-width:1.5px;"/>
+    <g transform="matrix(1,0,0,1,449.835,706)">
+        <text x="-44.385px" y="0px" style="font-family:'HelveticaNeue-Bold', 'Helvetica Neue';font-weight:700;font-size:11px;fill:rgb(148,163,184);">H<tspan x="-35.904px -27.016px -16.302px -12.914px -9.339px -2.288px 1.1px 11.814px 20.702px 28.974px 37.246px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">OW IT WORKS</tspan></text>
+    </g>
+    <circle cx="220" cy="734" r="14" style="fill:rgb(124,58,237);"/>
+    <g transform="matrix(1,0,0,1,220,739)">
+        <text x="-3.336px" y="0px" style="font-family:'HelveticaNeue-Bold', 'Helvetica Neue';font-weight:700;font-size:12px;fill:white;">1</text>
+    </g>
+    <g transform="matrix(1,0,0,1,242,730)">
+        <text x="0px" y="0px" style="font-family:'HelveticaNeue', 'Helvetica Neue';font-size:11px;fill:rgb(30,41,59);">Fetch live price</text>
+    </g>
+    <g transform="matrix(1,0,0,1,242,746)">
+        <text x="0px" y="0px" style="font-family:'HelveticaNeue', 'Helvetica Neue';font-size:10px;fill:rgb(100,116,139);">Kraken CLI binary</text>
+    </g>
+    <circle cx="220" cy="774" r="14" style="fill:rgb(124,58,237);"/>
+    <g transform="matrix(1,0,0,1,220,779)">
+        <text x="-3.336px" y="0px" style="font-family:'HelveticaNeue-Bold', 'Helvetica Neue';font-weight:700;font-size:12px;fill:white;">2</text>
+    </g>
+    <g transform="matrix(1,0,0,1,242,770)">
+        <text x="0px" y="0px" style="font-family:'HelveticaNeue', 'Helvetica Neue';font-size:11px;fill:rgb(30,41,59);">Get AI ver<tspan x="48.686px 55.209px " y="0px 0px ">di</tspan>ct</text>
+    </g>
+    <g transform="matrix(1,0,0,1,242,786)">
+        <text x="0px" y="0px" style="font-family:'HelveticaNeue', 'Helvetica Neue';font-size:10px;fill:rgb(100,116,139);">Council of Thr<tspan x="62.6px 67.97px " y="0px 0px ">ee</tspan> via Aegis Bot</text>
+    </g>
+    <circle cx="460" cy="734" r="14" style="fill:rgb(234,88,12);"/>
+    <g transform="matrix(1,0,0,1,460,739)">
+        <text x="-3.336px" y="0px" style="font-family:'HelveticaNeue-Bold', 'Helvetica Neue';font-weight:700;font-size:12px;fill:white;">3</text>
+    </g>
+    <g transform="matrix(1,0,0,1,482,730)">
+        <text x="0px" y="0px" style="font-family:'HelveticaNeue', 'Helvetica Neue';font-size:11px;fill:rgb(30,41,59);">Quality gate</text>
+    </g>
+    <g transform="matrix(1,0,0,1,482,746)">
+        <text x="0px" y="0px" style="font-family:'HelveticaNeue', 'Helvetica Neue';font-size:10px;fill:rgb(100,116,139);">BUY + conﬁdence ≥ 75%</text>
+    </g>
+    <circle cx="460" cy="774" r="14" style="fill:rgb(234,88,12);"/>
+    <g transform="matrix(1,0,0,1,460,779)">
+        <text x="-3.336px" y="0px" style="font-family:'HelveticaNeue-Bold', 'Helvetica Neue';font-weight:700;font-size:12px;fill:white;">4</text>
+    </g>
+    <g transform="matrix(1,0,0,1,482,770)">
+        <text x="0px" y="0px" style="font-family:'HelveticaNeue', 'Helvetica Neue';font-size:11px;fill:rgb(30,41,59);">Execute trade</text>
+    </g>
+    <g transform="matrix(1,0,0,1,482,786)">
+        <text x="0px" y="0px" style="font-family:'HelveticaNeue', 'Helvetica Neue';font-size:10px;fill:rgb(100,116,139);">Kraken CLI · live or<tspan x="84.46px 90.39px " y="0px 0px ">de</tspan>r</text>
+    </g>
+    <path d="M218,808L258,808" style="fill:none;fill-rule:nonzero;stroke:rgb(100,116,139);stroke-width:2px;"/>
+    <path d="M258,805L264,808L258,811L258,805Z" style="fill:rgb(100,116,139);fill-rule:nonzero;"/>
+    <g transform="matrix(1,0,0,1,270,812)">
+        <text x="0px" y="0px" style="font-family:'HelveticaNeue', 'Helvetica Neue';font-size:10px;fill:rgb(100,116,139);">Request</text>
+    </g>
+    <path d="M360,808L400,808" style="fill:none;fill-rule:nonzero;stroke:rgb(148,163,184);stroke-width:2px;stroke-dasharray:5,3;"/>
+    <path d="M400,805L406,808L400,811L400,805Z" style="fill:rgb(148,163,184);fill-rule:nonzero;"/>
+    <g transform="matrix(1,0,0,1,412,812)">
+        <text x="0px" y="0px" style="font-family:'HelveticaNeue', 'Helvetica Neue';font-size:10px;fill:rgb(148,163,184);">Response</text>
+    </g>
+    <g transform="matrix(1,0,0,1,450,852)">
+        <text x="-243.612px" y="0px" style="font-family:'HelveticaNeue', 'Helvetica Neue';font-size:12px;fill:rgb(148,163,184);">CLI is the conductor — it or<tspan x="-95.58px -89.136px " y="0px 0px ">ch</tspan>estrates Kraken data and Aegis AI into one autonomous loop</text>
+    </g>
+</svg>
