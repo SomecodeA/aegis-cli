@@ -21,6 +21,62 @@ $ python3 aegis-cli.py --execute TAO --validate
 
 ---
 
+## Features
+
+- **Three workflows** — AI analysis (`--pulse`), portfolio check (`--balance`), autonomous execution (`--execute`)
+- **Real AI engine** — calls the live Aegis bot's Council of Three via HTTP, not a local reimplementation
+- **Multi-agent debate** — Bull, Bear, and Judge personas powered by Claude (Anthropic) debate each trade
+- **Journal intelligence** — 2-day pulse history feeds back into every verdict for continuous improvement
+- **Quality gate** — confidence threshold blocks low-conviction entries before capital is deployed
+- **xStocks support** — tokenized equities (AAPLx, TSLAx) work alongside crypto
+- **Validate mode** — full dry-run execution with `--validate` flag, safe for demos
+- **Beautiful terminal output** — Rich-powered colour-coded debate rendering
+
+---
+
+## Quick start (2 minutes)
+
+```bash
+# 1. Clone
+git clone https://github.com/SomecodeA/aegis-cli.git
+cd aegis-cli
+
+# 2. Install dependencies
+pip3 install anthropic rich aiohttp
+
+# 3. Install Kraken CLI
+curl --proto '=https' --tlsv1.2 -LsSf \
+  https://github.com/krakenfx/kraken-cli/releases/latest/download/kraken-installer.sh | sh
+kraken auth set --api-key YOUR_KEY --api-secret YOUR_SECRET
+
+# 4. Configure
+cp .env.example .env
+# Add ANTHROPIC_API_KEY and SERPER_API_KEY at minimum
+
+# 5. Run
+python3 aegis-cli.py --pulse ETH
+python3 aegis-cli.py --balance
+python3 aegis-cli.py --execute TAO --validate
+```
+
+---
+
+## Architecture
+
+![Aegis CLI Architecture](architecture.svg)
+
+The CLI is the conductor. It fetches live data from Kraken, asks the Aegis Bot's AI engine for a verdict, then executes the trade back on Kraken — a true bi-directional loop.
+
+> **The Council of Three AI engine lives in the [Aegis Bot](#aegis-bot-connection) (private production system).** The CLI calls it via HTTP — verdicts are identical to those the live bot generates 24/7. A standalone fallback is included for when the API is unreachable, but the real intelligence is in the production engine.
+
+---
+
+## Demo
+
+📹 **[Watch the demo video on X →](https://x.com/cr7p2o/status/2058971438535803301?s=20)**
+
+---
+
 ## How it works
 
 ```
@@ -35,44 +91,18 @@ $ python3 aegis-cli.py --execute TAO --validate
 │  │          │            │        │                  │   │
 │  │  ┌───────▼────────┐  │        └────────┬─────────┘   │
 │  │  │ Council of 3   │  │                 │             │
-│  │  │ 🐂 🐻 ⚖️        │  │        ┌────────▼─────────┐   │
-│  │  │ Claude AI      │  │        │                  │   │
-│  │  └───────┬────────┘  │   ◄──► │   AEGIS CLI      │   │
-│  └──────────┼───────────┘        │   (conductor)    │   │
-│             │                    │                  │   │
-│             └───────────────────►│                  │   │
-│                                  └──────────────────┘   │
+│  │  │ 🐂 🐻 ⚖️        │◄─┼─────────────────┼─► AEGIS CLI │
+│  │  │ Claude AI      │  │                 │  (conductor)│
+│  │  └────────────────┘  │                 │             │
+│  └──────────────────────┘        └─────────────────────┘
 └─────────────────────────────────────────────────────────┘
 ```
-
-**The CLI is the conductor.** It:
-1. Fetches live price data from Kraken via the official CLI binary
-2. Sends price data to the Aegis bot's Council of Three AI engine
-3. Receives a multi-perspective verdict (Bull / Bear / Judge debate)
-4. Checks your live balance via Kraken CLI
-5. If the verdict clears the quality gate — places the order via Kraken CLI
-
----
-
-## The Council of Three
-
-The AI analysis is powered by **Aegis Bot's Council of Three** — a production multi-agent debate engine running 24/7 on a VPS. It is **not reimplemented in this CLI** — the CLI calls the bot's real engine via HTTP, ensuring verdicts are identical to those the bot generates.
-
-Three AI personas powered by **Claude (Anthropic)** debate each asset:
-
-| Persona | Role |
-|---------|------|
-| 🐂 **The Bull** | Argues momentum, demand zones, volume confirmation |
-| 🐻 **The Bear** | Challenges exhaustion, resistance, downside risk |
-| ⚖️ **The Judge** | Synthesises both views, issues final BUY / HOLD / SELL verdict |
-
-The engine includes **2-day journal intelligence** — previous pulse verdicts and price history feed back into each new analysis, creating a continuously improving signal.
 
 ---
 
 ## Three workflows
 
-### `--pulse <TICKER>` — AI analysis only
+### `--pulse <TICKER>` — AI analysis
 
 ```bash
 python3 aegis-cli.py --pulse TAO
@@ -88,15 +118,15 @@ Fetches live price from Kraken CLI → sends to Council of Three → renders Bul
 python3 aegis-cli.py --balance
 ```
 
-Calls `kraken balance -o json` to display your live Kraken portfolio. Demonstrates authenticated CLI access to private account data.
+Calls `kraken balance -o json` to display your live Kraken portfolio.
 
 ### `--execute <TICKER>` — Autonomous loop
 
 ```bash
-# Validate without placing a real order (safe for testing)
+# Dry-run — validates without placing a real order
 python3 aegis-cli.py --execute TAO --validate
 
-# Live execution — places a real order
+# Live — places a real order
 python3 aegis-cli.py --execute TAO --amount 50
 
 # Adjust quality gate threshold
@@ -104,8 +134,9 @@ python3 aegis-cli.py --execute TAO --gate 60
 ```
 
 The full five-step autonomous loop:
+
 1. **AI analysis** — Council of Three verdict via Aegis bot
-2. **Quality gate** — blocks execution if not BUY or confidence below threshold
+2. **Quality gate** — blocks if not BUY or confidence below threshold
 3. **Balance check** — verifies sufficient USD via `kraken balance`
 4. **Price discovery** — fetches live price via `kraken ticker`
 5. **Order execution** — places limit order via `kraken order buy`
@@ -116,48 +147,32 @@ The full five-step autonomous loop:
 
 ### Prerequisites
 
-**1. Python 3.11+**
+**Python 3.11+**
 ```bash
-# macOS
-brew install python@3.12
-
-# Verify
+brew install python@3.12   # macOS
 python3 --version
 ```
 
-**2. Kraken CLI binary**
+**Kraken CLI**
 ```bash
 curl --proto '=https' --tlsv1.2 -LsSf \
   https://github.com/krakenfx/kraken-cli/releases/latest/download/kraken-installer.sh | sh
-
-# Verify
 kraken --version
-
-# Authenticate with your Kraken API credentials
 kraken auth set --api-key YOUR_KEY --api-secret YOUR_SECRET
 ```
 
-**3. Python dependencies**
+**Python dependencies**
 ```bash
 pip3 install anthropic rich aiohttp
 ```
 
 ### Setup
 
-**Clone the repo:**
 ```bash
-git clone https://github.com/YOUR_USERNAME/aegis-cli.git
+git clone https://github.com/SomecodeA/aegis-cli.git
 cd aegis-cli
-```
-
-**Configure environment:**
-```bash
 cp .env.example .env
-# Edit .env with your API keys and server details
-```
-
-**Run:**
-```bash
+# Edit .env with your keys
 python3 aegis-cli.py --balance
 ```
 
@@ -165,11 +180,11 @@ python3 aegis-cli.py --balance
 
 ## Configuration
 
-All configuration lives in `.env` — never hardcoded. Copy `.env.example` to `.env` and fill in your values.
+All configuration lives in `.env` — never hardcoded. Copy `.env.example` to get started.
 
 | Variable | Description | Required |
 |----------|-------------|----------|
-| `ANTHROPIC_API_KEY` | Anthropic API key for Claude | Yes (fallback mode) |
+| `ANTHROPIC_API_KEY` | Anthropic API key for Claude | Yes |
 | `SERPER_API_KEY` | Serper API for news context | Recommended |
 | `AEGIS_COUNCIL_URL` | URL of your Aegis bot's Council API | Recommended |
 | `COUNCIL_API_KEY` | Shared secret for Council API auth | If URL is set |
@@ -181,41 +196,35 @@ All configuration lives in `.env` — never hardcoded. Copy `.env.example` to `.
 
 ---
 
-## Connection to the Aegis bot
+## Aegis Bot connection
 
-This CLI is a **standalone companion** to the [Aegis trading bot](https://github.com/YOUR_USERNAME/aegis-bot) — a 24/7 autonomous AI trading system running on a VPS.
+This CLI is a standalone companion to the **Aegis trading bot** — a 24/7 autonomous AI trading system running on a VPS. The core bot is a private production system; this CLI demonstrates its intelligence layer via a secure API endpoint.
 
-The bot exposes a lightweight HTTP endpoint that the CLI calls for AI analysis:
+> **The Council of Three prompt, calibration examples, and journal intelligence all live in the Aegis bot — not in this repo.** This is intentional. The CLI calls the bot's real engine, ensuring the AI reasoning is production-grade and continuously improving.
+
+The bot exposes a single endpoint the CLI calls:
 
 ```
 POST /council
 Content-Type: application/json
 X-API-Key: <COUNCIL_API_KEY>
 
-{
-  "ticker": "TAO",
-  "price": 283.94,
-  "change_pct": 7.15,
-  "high": 287.82,
-  "low": 252.89
-}
+{"ticker": "TAO", "price": 283.94, "change_pct": 7.15, "high": 287.82, "low": 252.89}
 ```
 
-The bot runs the real `council_of_three_batch()` function — including journal intelligence, news context, and the full calibrated prompt system — and returns the verdict JSON.
-
-**If the Council API is unreachable**, the CLI falls back to a standalone Anthropic API call using the same system prompt, ensuring it always produces a verdict.
-
-To enable the Council API on your own Aegis bot instance, add to your bot's `.env`:
+**To run the Council API on your own Aegis bot**, add to your bot's `.env`:
 ```
 COUNCIL_API_KEY=your_shared_secret
 COUNCIL_API_PORT=8765
 ```
 
-And ensure port 8765 is mapped in your `docker-compose.yml`:
+And map the port in `docker-compose.yml`:
 ```yaml
 ports:
   - "8765:8765"
 ```
+
+**If the Council API is unreachable**, the CLI falls back to a direct Anthropic API call using a minimal prompt — ensuring it always produces a verdict.
 
 ---
 
@@ -223,7 +232,8 @@ ports:
 
 ```
 aegis-cli/
-├── aegis-cli.py       # Main CLI script (all logic in one file)
+├── aegis-cli.py       # Main CLI script
+├── architecture.svg   # System architecture diagram
 ├── .env.example       # Configuration template — copy to .env
 ├── .gitignore         # Excludes .env, databases, and secrets
 └── README.md          # This file
@@ -231,23 +241,22 @@ aegis-cli/
 
 ---
 
-## Security notes
+## Security
 
-- **API keys** are loaded from `.env` at runtime — never hardcoded
-- **Server IP and port** live in `.env` — never in source code
-- The Council API requires a **shared secret** (`X-API-Key` header) to prevent public access
-- **xStocks orders** include `asset_class=tokenized_asset` as required by Kraken
-- All Kraken CLI calls use `-o json` for structured, parseable output
-- The `--validate` flag is strongly recommended before any live execution
+- API keys loaded from `.env` at runtime — never hardcoded
+- Server IP and port live in `.env` — never in source code
+- Council API requires a shared secret (`X-API-Key` header)
+- `--validate` flag recommended before any live execution
+- `.env` and `*.db` excluded from git via `.gitignore`
 
 ---
 
 ## Built with
 
 - [Kraken CLI](https://github.com/krakenfx/kraken-cli) — official Kraken exchange CLI binary
-- [Anthropic Claude](https://anthropic.com) — AI reasoning engine (Council of Three)
-- [Rich](https://github.com/Textualize/rich) — beautiful terminal output
-- [aiohttp](https://docs.aiohttp.org) — async HTTP for Council API calls
+- [Claude by Anthropic](https://anthropic.com) — AI reasoning (Council of Three)
+- [Rich](https://github.com/Textualize/rich) — terminal output
+- [aiohttp](https://docs.aiohttp.org) — async HTTP
 
 ---
 
